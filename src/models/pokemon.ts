@@ -6,9 +6,11 @@ type PokemonType = {
   }
 }
 
+type PokemonAbility = 'speed' | 'special-defense' | 'special-attack' | 'defense' | 'attack' | 'hp'
+
 export type StatItem = {
   base_stat: number
-  stat: { name: string }
+  stat: { name: PokemonAbility }
 }
 
 export interface Pokemon {
@@ -26,5 +28,5 @@ export interface PokemonViewModel {
   images: {
     frontDefault: string | null
   }
-  stats: Record<string, number>
+  stats: Record<PokemonAbility, number>
 }

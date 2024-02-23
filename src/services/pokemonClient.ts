@@ -3,7 +3,7 @@ import { HttpClient } from './http'
 export class PokemonClient extends HttpClient {
   constructor() {
     super({
-      baseURL: 'https://pokeapi.co/api/v2'
+      baseURL: import.meta.env.VITE_POKEMON_API_URI
     })
   }
 }
